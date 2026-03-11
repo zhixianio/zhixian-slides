@@ -1,0 +1,14 @@
+{
+  "name": "zhixian-slides",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /",
+    "export": "slidev export"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^0.50.0",
+    "@slidev/theme-default": "latest"
+  }
+}
