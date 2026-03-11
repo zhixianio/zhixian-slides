@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "slidev",
-    "build": "slidev build --base /",
-    "export": "slidev export"
+    "dev": "slidev decks/2026-03-example/slides.md",
+    "build": "bash scripts/build.sh",
+    "new": "bash scripts/new.sh"
   },
   "devDependencies": {
     "@slidev/cli": "^0.50.0",
