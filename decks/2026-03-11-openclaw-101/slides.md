@@ -1,20 +1,23 @@
 ---
-theme: default
+theme: seriph
 title: 2026-03-11-openclaw-101
 highlighter: shiki
 transition: slide-left
-mdc: true
 ---
 
-# 2026-03-11-openclaw-101
+# OpenClaw 101: Setup, Safety, and Survival
 
-Your presentation here
+by zhixian (@zhixianio)
 
 ---
 
-# Slide 2
+# Setup Guide
 
 Content
+
+---
+
+# Safety - Why is OpenClaw 
 
 ---
 layout: center

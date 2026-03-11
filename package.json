@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "__VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS=bunker slidev decks/2026-03-example/slides.md --remote",
+    "dev": "bash scripts/dev.sh",
     "build": "bash scripts/build.sh",
     "new": "bash scripts/new.sh"
   },
   "devDependencies": {
     "@slidev/cli": "^0.50.0",
     "@slidev/theme-default": "latest"
+  },
+  "dependencies": {
+    "@slidev/theme-seriph": "^0.25.0"
   }
 }
