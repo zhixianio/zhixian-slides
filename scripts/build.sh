@@ -11,39 +11,22 @@ for deck in decks/*/; do
   npx slidev build "$deck/slides.md" --base "/$name/" --out "../../dist/$name"
 done
 
-# 生成首页索引
-echo "Generating index..."
-cat > dist/index.html << 'EOF'
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>zhixian slides</title>
-  <style>
-    body { font-family: system-ui, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-    h1 { border-bottom: 2px solid #333; padding-bottom: 0.5rem; }
-    ul { list-style: none; padding: 0; }
-    li { margin: 1rem 0; }
-    a { color: #0066cc; text-decoration: none; font-size: 1.2rem; }
-    a:hover { text-decoration: underline; }
-  </style>
-</head>
-<body>
-  <h1>📽️ zhixian slides</h1>
-  <ul>
-EOF
+# 复制首页
+cp public/index.html dist/index.html
 
+# 动态更新首页的 slides 列表
+echo "Updating index with deck list..."
+DECK_LIST=""
 for deck in dist/*/; do
   name=$(basename "$deck")
-  echo "    <li><a href=\"/$name/\">$name</a></li>" >> dist/index.html
+  DECK_LIST="$DECK_LIST<li class=\"deck-card\"><a href=\"/$name/\"><span class=\"icon\">🎯</span><span>$name</span><span class=\"arrow\">→</span></a></li>"
 done
 
-cat >> dist/index.html << 'EOF'
-  </ul>
-  <p><a href="https://zhixian.site">← Back to blog</a></p>
-</body>
-</html>
-EOF
+# 用 sed 替换占位内容
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  sed -i '' "s|<li class=\"deck-card\">.*<!-- 新增 slides 时在这里添加 -->|$DECK_LIST|" dist/index.html
+else
+  sed -i "s|<li class=\"deck-card\">.*<!-- 新增 slides 时在这里添加 -->|$DECK_LIST|" dist/index.html
+fi
 
 echo "Done! Output in dist/"
