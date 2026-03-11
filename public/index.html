@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zhixian slides</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      min-height: 100vh;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      color: #888;
+      margin-bottom: 2rem;
+    }
+    .decks {
+      list-style: none;
+      padding: 0;
+    }
+    .decks li {
+      margin: 1rem 0;
+      padding: 1rem 1.5rem;
+      background: #1a1a1a;
+      border-radius: 8px;
+      border: 1px solid #333;
+      transition: border-color 0.2s;
+    }
+    .decks li:hover {
+      border-color: #666;
+    }
+    .decks a {
+      color: #58a6ff;
+      text-decoration: none;
+      font-size: 1.2rem;
+      display: block;
+    }
+    .decks a:hover {
+      text-decoration: underline;
+    }
+    .meta {
+      color: #666;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid #333;
+      color: #666;
+    }
+    footer a { color: #888; }
+  </style>
+</head>
+<body>
+  <h1>📽️ zhixian slides</h1>
+  <p class="subtitle">技术分享 slides 合集</p>
+
+  <ul class="decks">
+    <li>
+      <a href="/2026-03-example/">2026-03-example</a>
+      <div class="meta">示例 slides</div>
+    </li>
+    <!-- 新增 slides 时在这里添加 -->
+  </ul>
+
+  <footer>
+    <a href="https://zhixian.site">Blog</a> ·
+    <a href="https://github.com/zhixian">GitHub</a> ·
+    <a href="https://x.com/zhixianio">X</a>
+  </footer>
+</body>
+</html>
