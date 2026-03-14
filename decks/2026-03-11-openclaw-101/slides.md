@@ -36,7 +36,7 @@ Let's start with the practical stuff. Three decisions: where to run it, how to i
 
 <v-clicks>
 
-- **Ideal: a dedicated device** — spare laptop, VPS ($5/mo), old Android phone (BotDrop). Runs 24/7 → always-on assistant that works while you sleep.
+- **Ideal: a dedicated device** — spare laptop, VPS ($5/mo), old Android phone ([BotDrop.app](https://botdrop.app)). Runs 24/7 → always-on assistant that works while you sleep.
 
 - **On your main machine?** Isolate it — Windows → WSL (built-in Ubuntu), macOS → Docker or UTM VM.
 
@@ -82,7 +82,7 @@ Context summarization: turn this on. When conversation gets long enough to compr
 
 ---
 
-# Upgrade when you're ready
+# Upgrade channels when you're ready
 
 <div class="text-2xl text-center my-8 font-bold">
 
@@ -102,10 +102,12 @@ layout: section
 
 # 2. Safety
 
-*The more you give it, the more you should think about*
+*Risk grows with depth — start simple, stay aware*
 
 <!--
-Now the part most people skip. Agent security is different from traditional security — the Agent is already authorized. The question is how much power you give it, and what can go wrong at each level.
+Now the part most people skip. Agent security is different from traditional security — the Agent is already authorized.
+
+But don't overthink it — the risks only grow as you go deeper into using OpenClaw. When you're just getting started, things are relatively contained and manageable.
 -->
 
 ---
@@ -230,14 +232,19 @@ Big things always start from small conversations.
 <v-clicks>
 
 - **Upgrades** — don't blindly upgrade. Read the changelog. Recent versions have had breaking changes.
-- **Sessions** — context bloat is real. Sessions can leak into each other. This is the biggest early pain point.
 - **Config** — let the Agent read docs first (`docs.openclaw.ai/llms.txt`). Use CLI, don't hand-write JSON.
 - **Browser** — on Linux, expect setup friction. `openclaw profile + playwright` or Chromium + CDP.
 
 </v-clicks>
 
 <!--
-Some pitfalls from my experience. Upgrades: don't auto-upgrade, recent versions had breaking changes — read changelogs. Sessions: the number one pain point early on — context bloats, info gets lost during compression, sessions cross-contaminate. That's why summarization matters. Config: never hand-edit JSON, use CLI or let the Agent do it after reading the docs. Browser on Linux is a whole adventure — playwright setup, finding Chrome, plugin prompts. All solvable, but expect to hit them.
+Some pitfalls from my experience. 
+
+Upgrades: don't auto-upgrade, recent versions had breaking changes — read changelogs. 
+
+Config: never hand-edit JSON, use CLI or let the Agent do it after reading the docs. 
+
+Browser on Linux is a whole adventure — playwright setup, finding Chrome, plugin prompts. All solvable, but expect to hit them.
 -->
 
 ---
@@ -257,7 +264,15 @@ Some pitfalls from my experience. Upgrades: don't auto-upgrade, recent versions 
 </v-clicks>
 
 <!--
-The question nobody answers: what's it actually for? Three buckets. Making money — help with work, side projects, content creation. Saving time — build the habit of delegating, but make sure savings cover costs. Or just exploring — run multiple instances, try different configs, have fun. All valid. But knowing which one you're going for prevents you from giving up when things get frustrating.
+This is the question most people skip — and the main reason they give up after a week.
+
+Making money: freelance work, content creation, side projects — can the Agent touch any of your revenue flows?
+
+Saving time: build the habit of asking "can my Agent do this?" But be honest about API costs — track your first month, use subscriptions over pay-per-token.
+
+Exploring: totally valid. Spin up multiple instances, try different models, see what breaks. Some of my best use cases came from unplanned experiments.
+
+Pick your bucket. When things get frustrating — and they will — knowing WHY you're doing this helps you push through.
 -->
 
 ---
