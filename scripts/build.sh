@@ -7,6 +7,10 @@ mkdir -p dist
 # 构建每个 deck
 for deck in decks/*/; do
   name=$(basename "$deck")
+  # 创建 public symlink，让 slidev 能访问共享资源
+  if [[ ! -L "$deck/public" ]]; then
+    ln -sf "../../public" "$deck/public"
+  fi
   echo "Building $name..."
   npx slidev build "$deck/slides.md" --base "/$name/" --out "../../dist/$name"
 done

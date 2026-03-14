@@ -22,5 +22,11 @@ if [[ ! -f "$deck" ]]; then
   exit 1
 fi
 
+# 为每个 deck 创建 public symlink，让 slidev 能访问共享资源
+deck_dir="decks/$name"
+if [[ ! -L "$deck_dir/public" ]]; then
+  ln -sf "../../public" "$deck_dir/public"
+fi
+
 echo "Starting: $deck"
 __VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS=bunker npx slidev "$deck" --remote
