@@ -8,7 +8,7 @@ mkdir -p dist
 for deck in decks/*/; do
   name=$(basename "$deck")
   # 创建 public symlink，让 slidev 能访问共享资源
-  if [[ ! -L "$deck/public" ]]; then
+  if [[ ! -e "$deck/public" ]]; then
     ln -sf "../../public" "$deck/public"
   fi
   echo "Building $name..."
