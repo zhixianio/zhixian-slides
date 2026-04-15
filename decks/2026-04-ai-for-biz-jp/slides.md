@@ -189,7 +189,7 @@ class: cover
 hr { border: none; height: 1px; background: linear-gradient(to right, transparent, rgba(0,0,0,0.12), transparent); margin: 2rem 0; }
 </style>
 
-# AI 小白也能听懂的实用指南
+# AI 落地实践浅谈
 
 <div class="text-xl mt-4 opacity-80 font-light">
   让 AI 成为你的"兼职员工"
