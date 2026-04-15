@@ -1,6 +1,6 @@
 ---
 theme: default
-title: AI 小白也能听懂的实用指南
+title: AI 落地实践浅谈
 highlighter: shiki
 transition: fade-out
 mdc: true
@@ -291,10 +291,6 @@ class: text-center
 工具每月都在换，思路能用五年
 </div>
 
-<div class="mt-6 text-sm opacity-70">
-（下一页会给一张"全景地图"帮你对位，<br/>不是推荐清单，是让你知道自己大概在哪个位置）
-</div>
-
 <!--
 好，进入正题。今天我不想给大家一个"十个必备 AI 工具清单"——因为这种清单你们回去搜一下就有，而且工具每个月都在更新，今天给的清单可能下个月就过时了。
 
@@ -361,12 +357,8 @@ layout: section
 
 ## 把 AI 变成你的 **兼职员工**
 
-<div class="mt-12 text-lg opacity-70 font-light">
-不是一个魔法按钮，也不是一个搜索框
-</div>
-
 <div class="mt-2 text-base opacity-50 italic">
-是一个你招进来、培训、管理、给反馈的"员工"
+  降本增效 ｜ 优化流程 ｜ 拓展方向
 </div>
 
 <!--
