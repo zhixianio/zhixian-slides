@@ -13,5 +13,16 @@
   },
   "dependencies": {
     "@slidev/theme-seriph": "^0.25.0"
+  },
+  "slidev": {
+    "vite": {
+      "server": {
+        "allowedHosts": [
+          "bunker",
+          "slides.zhixian.io",
+          "localhost"
+        ]
+      }
+    }
   }
 }

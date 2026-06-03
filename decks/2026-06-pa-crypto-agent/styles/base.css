@@ -1,0 +1,213 @@
+@import './prism.css';
+
+:root {
+  --slidev-theme-primary: #2997ff;
+  --slidev-slide-container-background: #0a0a14;
+  --slidev-controls-foreground: rgba(255, 255, 255, 0.5);
+  --slidev-code-background: rgba(255, 255, 255, 0.06);
+  --slidev-code-foreground: #e8e8ed;
+
+  --pr-font: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  --pr-mono: 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* ===== Slide background: dark navy with subtle color halos ===== */
+
+.slidev-layout,
+#app,
+#slide-container {
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 50%, rgba(41, 151, 255, 0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 30%, rgba(94, 92, 230, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 50% 80%, rgba(48, 209, 199, 0.05) 0%, transparent 50%),
+    #0a0a14 !important;
+}
+
+/* ===== Base typography ===== */
+
+.slidev-layout {
+  font-family: var(--pr-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: #f5f5f7;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 1.7rem;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: #f5f5f7;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #e8e8ed;
+  }
+
+  p, li {
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.55;
+    color: #c7c7cc;
+  }
+
+  strong {
+    color: #f5f5f7;
+  }
+
+  a {
+    color: #64b5ff;
+  }
+
+  code {
+    font-family: var(--pr-mono);
+    font-size: 0.9em;
+  }
+}
+
+/* ===== Section divider: solid white, large ===== */
+
+.slidev-layout.section {
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #f5f5f7;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 0.5rem;
+  }
+}
+
+/* ===== Cover / title slide ===== */
+
+.slidev-layout.cover,
+.slidev-layout:has(> h1:only-child) {
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+  }
+}
+
+/* ===== Center layout ===== */
+
+.slidev-layout.center {
+  h1 {
+    font-size: 2.8rem;
+  }
+}
+
+/* ===== Two-cols ===== */
+
+.slidev-layout.two-cols {
+  gap: 3rem;
+}
+
+/* ===== v-click transitions ===== */
+
+.slidev-vclick-target {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== List bullet dots ===== */
+
+.slidev-layout ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.slidev-layout li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.slidev-layout li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #2997ff;
+}
+
+/* ===== Mermaid diagrams ===== */
+
+.slidev-layout .mermaid {
+  font-family: var(--pr-font);
+}
+
+/* ===== Table ===== */
+
+.slidev-layout table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.slidev-layout th {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #86868b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.6rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.slidev-layout td {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  color: #e8e8ed;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===== Code blocks ===== */
+
+.slidev-layout pre {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ===== HR ===== */
+
+.slidev-layout hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 1.2rem 0;
+}
+
+/* ===== Blockquote ===== */
+
+.slidev-layout blockquote {
+  border-left: 3px solid #2997ff;
+  padding-left: 1.2rem;
+  margin: 0.8rem 0;
+  color: #98989d;
+  font-style: italic;
+}
+
+/* ===== Frosted glass cards ===== */
+
+.slidev-layout .border.rounded {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
